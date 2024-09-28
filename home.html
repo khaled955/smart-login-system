@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+<script>
+if (JSON.parse(localStorage.getItem("isloged")) !== true) {
+  window.location.assign("./index.html")
+}
+
+</script>
+
+<!--  oswald google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<!--  roboto google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!--  font Awesome library -->
+  <link rel="stylesheet" href="./css/all.min.css">
+<!--  bootstrap css file -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<!--  my main style sheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body class=" home-page" id="indexPage">
+
+
+
+    
+<section class="home-box position-relative overflow-hidden">
+<div class="home-header-box py-3 fixed-top z-3">
+    <div class="container d-flex justify-content-between align-items-center">
+       <a class="h1 text-uppercase" href="#"> smart login</a>
+        <button id="logOutBtn" class="btn btn-warning text-capitalize">log out</button>
+    </div>
+</div>
+<div class="home-main min-vh-100 d-flex justify-content-center align-items-center">
+<div class="welcome-box p-5">
+<h2 id="homeHeader" class="h1 text-capitalize fw-bold home-header"> </h2>
+</div>
+</div>
+<div id="moveOne" class="img-one welcome-img">
+  <img class="w-100" src="./imgs/ballons1_.jpg" alt="">
+</div>
+<div id="moveTwo" class="img-two welcome-img">
+  <img class="w-100" src="./imgs/ballons2.jpg" alt="">
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<div id="bulletBox" data-width="150" class="color-bullets position-fixed top-50 translate-middle-y z-3">
+  <ul class="d-flex gap-3">
+    <li id="whiteBtn" class="my-white" data-mode="white-theme"></li>
+    <li id="darkBtn" class="my-dark" data-mode="dark-theme"></li>
+  </ul>
+  <div class="icon">
+    <i id="spinner" class="fa-solid fa-gear fw-bold fa-spin"></i>
+  
+    </div>
+</div>
+
+
+
+
+
+
+ <!--  bootstrap js bundle -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+<!--  my main js file -->
+  <script src="./js/home.js"></script>
+</body>
+</html>
