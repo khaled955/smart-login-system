@@ -1,79 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Login App</title>
 
+    <!--  oswald google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--  roboto google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-<!--  oswald google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<!--  roboto google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--  font Awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!--  bootstrap css file -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--  my main style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--  Media Query file -->
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
 
-<!--  font Awesome library -->
-  <link rel="stylesheet" href="./css/all.min.css">
-<!--  bootstrap css file -->
-<link rel="stylesheet" href="./css/bootstrap.min.css">
-<!--  my main style sheet -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+  <body class="index-page" id="indexPage">
+    <section
+      class="main-box min-vh-100 d-flex align-items-center flex-column p-5"
+    >
+      <div class="inner-box p-5 ">
+        <h1 class="text-center mb-4 text-capitalize">smart login system</h1>
 
+        <form id="loginForm" class="mb-5">
+          <div class="mb-5">
+            <input
+              id="email"
+              class="form-control shadow-none bg-transparent"
+              autocomplete="off"
+              type="email"
+              name="user-email"
+              placeholder="enter your email"
+            />
+            <p id="errorP" class="error-p d-none text-capitalize">
+              your email must be valid
+            </p>
+            <input
+              id="password"
+              class="form-control shadow-none bg-transparent mt-5"
+              autocomplete="off"
+              type="password"
+              name="user-password"
+              placeholder="enter your password"
+            />
+            <ul id="errorU" class="list-error d-none">
+              <li>At least one upper case English letter</li>
+              <li>At least one lower case English letter</li>
+              <li>At least one digit</li>
+              <li>At least one special character or space</li>
+              <li>Minimum eight in length</li>
+            </ul>
+          </div>
+          <p
+            id="hiddenError"
+            class="hidden-error text-capitalize text-center d-none"
+          ></p>
+          <button
+            id="logBtn"
+            class="btn btn-outline-primary log-btn w-100"
+            type="submit"
+          >
+            login
+          </button>
+        </form>
+        <p class="d-inline-block text-white text-capitalize">
+          dont have account ?
+        </p>
+        <button
+          id="transSignBtn"
+          class="trans-sign-btn text-white bg-transparent text-capitalize fw-bold"
+        >
+          sign up
+        </button>
+      </div>
+    </section>
 
-<body class=" index-page" id="indexPage">
-
-
-
-    
-<section class="main-box min-vh-100 d-flex align-items-center flex-column p-5">
-  <div class="inner-box p-5 w-50">
-    <h1 class="text-center mb-4 text-capitalize">smart login system</h1>
-
-<form id="loginForm" class="mb-5">
-  <div class="mb-5">
-    <input id="email" class="form-control shadow-none bg-transparent" autocomplete="off" type="email" name="user-email" placeholder="enter your email">
-    <p id="errorP" class="error-p d-none text-capitalize"> your email must be valid</p>
-  <input id="password" class="form-control shadow-none bg-transparent mt-5" autocomplete="off" type="password" name="user-password" placeholder="enter your password">
-  <ul id="errorU" class="list-error d-none">
-    <li>At least one upper case English letter</li>
-    <li>At least one lower case English letter</li>
-    <li>At least one digit</li>
-    <li>At least one special character or space</li>
-    <li>Minimum eight in length</li>
-  </ul>
-  </div>
-<p id="hiddenError" class="hidden-error text-capitalize text-center d-none"></p>
-  <button id="logBtn" class="btn btn-outline-primary log-btn w-100" type="submit">login</button>
-</form>
-<p class="d-inline-block text-white text-capitalize"> dont have account ? </p> <button id="transSignBtn" class="trans-sign-btn text-white bg-transparent text-capitalize fw-bold">sign up</button>
-  </div>
-</section>
-
-
-
-<div id="bulletBox" data-width="150" class="color-bullets position-fixed top-50 translate-middle-y z-3">
-  <ul class="d-flex gap-3">
-    <li id="whiteBtn" class="my-white" data-mode="white-theme"></li>
-    <li id="darkBtn" class="my-dark" data-mode="dark-theme"></li>
-  </ul>
-  <div class="icon">
-    <i id="spinner" class="fa-solid fa-gear fw-bold fa-spin"></i>
-  
+    <div
+      id="bulletBox"
+      data-width="150"
+      class="color-bullets position-fixed top-50 translate-middle-y z-3"
+    >
+      <ul class="d-flex gap-3">
+        <li id="whiteBtn" class="my-white" data-mode="white-theme"></li>
+        <li id="darkBtn" class="my-dark" data-mode="dark-theme"></li>
+      </ul>
+      <div class="icon">
+        <i id="spinner" class="fa-solid fa-gear fw-bold fa-spin"></i>
+      </div>
     </div>
-</div>
 
-
-
-
-
-
- <!--  bootstrap js bundle -->
-<script src="./js/bootstrap.bundle.min.js"></script>
-<!--  my main js file -->
-  <script src="./js/login.js"></script>
-</body>
+    <!--  bootstrap js bundle -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--  my main js file -->
+    <script src="./js/login.js"></script>
+  </body>
 </html>
