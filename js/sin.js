@@ -234,7 +234,7 @@ allInputs.forEach(input=>{
 
 
 signUpBtn.addEventListener("click",e=>{
-    window.location.assign("../index.html")
+    window.location.assign("index.html")
 })
 
 

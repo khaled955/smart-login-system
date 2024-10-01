@@ -11,7 +11,7 @@ let allWelcomeImgs = document.querySelectorAll(".welcome-img")
 
 logOutBtn.addEventListener("click",function(){
 
-window.location.assign("../index.html")
+window.location.assign("index.html")
 localStorage.setItem("isloged","false")
 localStorage.setItem("animated","false")
 })

@@ -117,7 +117,7 @@ for (let i = 0; i < dataStorage.length ; i++) {
     
 if (dataStorage[i].email === emailValue.trim().toLowerCase() && dataStorage[i].password === passValue.trim().toLowerCase() ) {
    
-window.location.assign("../home.html")
+window.location.assign("home.html")
 localStorage.setItem("isloged","true")
 localStorage.setItem("animated","true")
 }else if(dataStorage[i].email.includes(emailValue.trim().toLowerCase()) === false){
@@ -158,5 +158,5 @@ allInputs.forEach(input=>{
 
 
 signUpBtn.addEventListener("click",e=>{
-    window.location.assign("../sinup.html")
+    window.location.assign("sinup.html")
 })
